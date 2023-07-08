@@ -1,5 +1,6 @@
 import GridItem from "@components/GridItem";
 import Navbar from "@components/Navbar";
+import ShoppingCart from "@components/ShoppingCart";
 
 export default function Home() {
   const data = [
@@ -22,6 +23,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <ShoppingCart/>
     </main>
   );
 }
