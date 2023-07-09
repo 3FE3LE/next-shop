@@ -39,10 +39,13 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
       if (ProductExist) {
         setProducts(
           products.map((item) =>
-            item.product === product || ProductExist.quantity < 9
+            item.product === product
               ? {
                   ...ProductExist,
-                  quantity: ProductExist.quantity + 1,
+                  quantity:
+                    ProductExist.quantity < 9
+                      ? ProductExist.quantity + 1
+                      : ProductExist.quantity,
                 }
               : item
           )
