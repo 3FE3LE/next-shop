@@ -14,7 +14,7 @@ export default function ShoppingCart() {
       <div className="flex justify-between p-4">
         <h1 className="font-bold text-2xl">Shopping Cart</h1>
         <button onClick={()=> handleChangeModal()} className="">
-          <div className="fill-white hover:animate-spin">
+          <div className="fill-white hover:fill-slate-500 transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1.75em"

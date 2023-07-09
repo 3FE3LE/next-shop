@@ -18,7 +18,7 @@ export default function Navbar() {
         </Link>
       </div>
       <button onClick={()=> handleChangeModal()}>
-        <div className="fill-white hover:animate-bounce">
+        <div className="fill-white hover:fill-slate-500 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1.75em"
