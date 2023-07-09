@@ -1,3 +1,4 @@
+'use client'
 import useSushiCart from "@hooks/useSushiCart";
 
 

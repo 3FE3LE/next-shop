@@ -1,4 +1,4 @@
-
+'use client'
 type GridItemProps = {
   item: {
     name: string;
