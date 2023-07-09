@@ -1,13 +1,12 @@
-'use client'
+"use client";
 import useSushiCart from "@hooks/useSushiCart";
 import Link from "next/link";
 
 export default function Navbar() {
-
-  const {handleChangeModal} = useSushiCart();
+  const { handleChangeModal } = useSushiCart();
 
   return (
-    <nav className="flex justify-between  p-4 h-18">
+    <nav className="flex justify-between p-4 h-18">
       <div className="flex gap-8 items-center">
         <h1 className="font-bold text-2xl">Sushi Cart</h1>
         <Link href={"/total"}>
@@ -17,7 +16,7 @@ export default function Navbar() {
           <li>Resume</li>
         </Link>
       </div>
-      <button onClick={()=> handleChangeModal()}>
+      <button onClick={() => handleChangeModal()}>
         <div className="fill-white hover:fill-slate-500 transition-colors">
           <svg
             xmlns="http://www.w3.org/2000/svg"

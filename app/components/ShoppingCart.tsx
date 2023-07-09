@@ -1,10 +1,8 @@
-'use client'
+"use client";
 import useSushiCart from "@hooks/useSushiCart";
 
-
-
 export default function ShoppingCart() {
-  const {modal, handleChangeModal} = useSushiCart();
+  const { modal, handleChangeModal, products } = useSushiCart();
 
   return (
     <div
@@ -14,7 +12,7 @@ export default function ShoppingCart() {
     >
       <div className="flex justify-between p-4">
         <h1 className="font-bold text-2xl">Shopping Cart</h1>
-        <button onClick={()=> handleChangeModal()} className="">
+        <button onClick={() => handleChangeModal()} className="">
           <div className="fill-white hover:fill-slate-500 transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +24,19 @@ export default function ShoppingCart() {
           </div>
         </button>
       </div>
+      <section className="h-full overflow-auto px-4">
+        <h2 className="font-bold text-xl pb-8">Products</h2>
+        <div className="grid grid-flow-row grid-cols-1 gap-4">
+          {products.map((item) => (
+            <div
+              className="bg-slate-400 aspect-video text-black"
+              key={item.color}
+            >
+              hola
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
