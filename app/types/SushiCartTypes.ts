@@ -3,3 +3,7 @@ export type TProduct = {
   color: string;
   description: string;
 };
+export type TOrderProduct = {
+  product: TProduct,
+  quantity: number,
+}
