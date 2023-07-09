@@ -1,3 +1,4 @@
+import React from 'react'
 import GridItem from "@components/GridItem";
 import Navbar from "@components/Navbar";
 import ShoppingCart from "@components/ShoppingCart";
