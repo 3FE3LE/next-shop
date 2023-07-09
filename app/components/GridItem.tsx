@@ -16,7 +16,7 @@ export default function GridItem({ item }: GridItemProps) {
         item.color + " first:col-span-2 first:row-span-2 aspect-square"
       }
     >
-      {item.name}
+      {item.color}
     </div>
   );
 }

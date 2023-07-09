@@ -2,7 +2,8 @@
 import useSushiCart from "@hooks/useSushiCart";
 
 export default function ShoppingCart() {
-  const { modal, handleChangeModal, products } = useSushiCart();
+  const { modal, handleChangeModal, products, handleRemoveProduct } =
+    useSushiCart();
 
   return (
     <div
@@ -25,14 +26,31 @@ export default function ShoppingCart() {
         </button>
       </div>
       <section className="h-full overflow-auto px-4">
-        <h2 className="font-bold text-xl pb-8">Products</h2>
+        <div className="flex justify-between pb-8">
+          <h2 className="font-bold text-xl ">
+            Products:{" "}
+            <span className="text-lg font-light">{products.length}</span>
+          </h2>
+        </div>
         <div className="grid grid-flow-row grid-cols-1 gap-4">
           {products.map((item) => (
             <div
-              className="bg-slate-400 aspect-video text-black"
+              className="bg-slate-400 aspect-video text-black relative"
               key={item.color}
             >
-              hola
+              <button onClick={() => handleRemoveProduct(item)} className="">
+                <div className="fill-white hover:fill-slate-500 transition-colors absolute right-4 top-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1.75em"
+                    viewBox="0 0 384 512"
+                  >
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                  </svg>
+                </div>
+              </button>
+
+              {item.color}
             </div>
           ))}
         </div>

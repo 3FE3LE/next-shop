@@ -8,6 +8,7 @@ export type TSushiCartContext = {
   handleChangeModal: () => void;
   products: TProduct[];
   handleAddProduct: (product: TProduct) => void;
+  handleRemoveProduct: (product: TProduct) => void;
 };
 
 const SushiCartContext = createContext<TSushiCartContext>({
@@ -15,6 +16,7 @@ const SushiCartContext = createContext<TSushiCartContext>({
   handleChangeModal: () => {},
   products: [],
   handleAddProduct: () => {},
+  handleRemoveProduct: () => {},
 });
 
 const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
@@ -22,6 +24,7 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
   const [products, setProducts] = useState<TProduct[]>([]);
 
   const Context = useMemo(() => {
+
     const handleChangeModal = () => {
       setModal(!modal);
     };
@@ -31,7 +34,12 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
       setProducts(newProducts);
     };
 
-    return { modal, handleChangeModal, products, handleAddProduct };
+    const handleRemoveProduct = (product: TProduct) => {
+      const newProducts = products.filter(item => item !== product)
+      setProducts(newProducts)
+    }
+
+    return { modal, handleChangeModal, products, handleAddProduct, handleRemoveProduct };
   }, [modal, products]);
 
   return (
