@@ -1,6 +1,11 @@
+'use client'
+import useSushiCart from "@hooks/useSushiCart";
 import Link from "next/link";
 
 export default function Navbar() {
+
+  const {handleChangeModal} = useSushiCart();
+
   return (
     <nav className="flex justify-between  p-4 h-18">
       <div className="flex gap-8 items-center">
@@ -12,8 +17,8 @@ export default function Navbar() {
           <li>Resume</li>
         </Link>
       </div>
-      <button>
-        <div className="fill-white">
+      <button onClick={()=> handleChangeModal()}>
+        <div className="fill-white hover:animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1.75em"

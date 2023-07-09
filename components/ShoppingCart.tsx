@@ -1,9 +1,19 @@
+'use client'
+import useSushiCart from "@hooks/useSushiCart";
+import React from "react";
+
 export default function ShoppingCart() {
+  const {modal, handleChangeModal} = useSushiCart();
+
   return (
-    <div className="fixed bg-black  h-vh w-1/3 right-0 top-0 bottom-0 transition-transform">
+    <div
+      className={`fixed bg-black  h-vh w-1/3 right-0 top-0 bottom-0 transition-transform ${
+        !modal ? "translate-x-full" : ""
+      }`}
+    >
       <div className="flex justify-between p-4">
         <h1 className="font-bold text-2xl">Shopping Cart</h1>
-        <button className="">
+        <button onClick={()=> handleChangeModal()} className="">
           <div className="fill-white hover:animate-spin">
             <svg
               xmlns="http://www.w3.org/2000/svg"
