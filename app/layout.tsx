@@ -1,7 +1,8 @@
+import React from "react";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { SushiCartProvider } from "@context/SushiCartContext";
+import { SushiCartProvider } from "./context/SushiCartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 

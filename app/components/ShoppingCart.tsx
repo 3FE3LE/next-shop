@@ -1,6 +1,6 @@
-'use client'
 import useSushiCart from "@hooks/useSushiCart";
-import React from "react";
+
+
 
 export default function ShoppingCart() {
   const {modal, handleChangeModal} = useSushiCart();
