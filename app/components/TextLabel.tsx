@@ -1,11 +1,13 @@
 import React from "react";
 import { TLabelProps } from "../types/SushiCartTypes";
 
-
-
-export default function TextLabel({ text }: TLabelProps) {
+export default function TextLabel({ text, isModal }: TLabelProps) {
   return (
-    <span className="text-2xl font-bold absolute top-0 left-0 text-slate-100 bg-black px-2">
+    <span
+      className={` text-xl sm:text-2xl transition-transform origin-top-left font-bold text-slate-100 bg-black px-2 ${
+        isModal ? "scale-150" : ""
+      }`}
+    >
       {text}
     </span>
   );

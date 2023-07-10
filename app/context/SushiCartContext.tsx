@@ -5,7 +5,7 @@ import { TOrderProduct, TProduct } from "../types/SushiCartTypes";
 
 export type TSushiCartContext = {
   total: number;
-  modal: boolean;
+  isModalShow: boolean;
   handleChangeModal: () => void;
   products: TOrderProduct[];
   handleAddProduct: (product: TProduct) => void;
@@ -15,7 +15,7 @@ export type TSushiCartContext = {
 
 const SushiCartContext = createContext<TSushiCartContext>({
   total: 0,
-  modal: false,
+  isModalShow: false,
   handleChangeModal: () => {},
   products: [],
   handleAddProduct: () => {},
@@ -24,7 +24,7 @@ const SushiCartContext = createContext<TSushiCartContext>({
 });
 
 const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
-  const [modal, setModal] = useState<boolean>(false);
+  const [isModalShow, setIsModalShow] = useState<boolean>(false);
   const [products, setProducts] = useState<TOrderProduct[]>([]);
   const [total, setTotal] = useState<number>(0);
   // Add or remove a sushi from the cart and update state accordingly
@@ -37,14 +37,14 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
       return sum;
     };
     if (products.length === 0) {
-      setModal(false);
+      setIsModalShow(false);
     }
     setTotal(calcTotal());
   }, [products]);
 
   const Context = useMemo(() => {
     const handleChangeModal = () => {
-      setModal(!modal);
+      setIsModalShow(!isModalShow);
     };
 
     const handleAddProduct = (product: TProduct) => {
@@ -96,14 +96,14 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
 
     return {
       total,
-      modal,
+      isModalShow,
       handleChangeModal,
       products,
       handleAddProduct,
       handleRemoveProduct,
       handleDeleteProduct,
     };
-  }, [modal, products, total]);
+  }, [isModalShow, products, total]);
 
   return (
     <SushiCartContext.Provider value={Context}>
