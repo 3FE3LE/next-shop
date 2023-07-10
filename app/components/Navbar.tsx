@@ -6,7 +6,7 @@ export default function Navbar() {
   const { handleChangeModal, products } = useSushiCart();
 
   return (
-    <nav className="flex justify-between p-4 h-18">
+    <nav className="flex sticky top-0 justify-between p-4 h-18">
       <div className="flex gap-8 items-center">
         <h1 className="font-bold text-2xl">Sushi Cart</h1>
         <Link href={"/total"}>
