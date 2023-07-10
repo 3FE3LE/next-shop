@@ -4,12 +4,12 @@ import ProductList from "./ProductList";
 import utils from "@utils/index";
 
 export default function ShoppingCart() {
-  const { total, modal, handleChangeModal, products } = useSushiCart();
+  const { total, isModalShow, handleChangeModal, products } = useSushiCart();
 
   return (
     <div
-      className={`fixed bg-black h-screen w-1/3 right-0 top-0 bottom-0 pt-16 transition-transform ${
-        !modal ? "translate-x-full" : ""
+      className={`fixed bg-black h-screen w-full md:w-1/2 lg:w-1/3 right-0 top-0 bottom-0 pt-16 transition-transform ${
+        !isModalShow ? "translate-x-full" : ""
       }`}
     >
       <div className="absolute top-0 right-0 w-full flex justify-between p-4">
