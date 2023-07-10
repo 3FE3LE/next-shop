@@ -82,5 +82,26 @@ export const sushiPlates = [
     color: "bg-green-500",
     description: "Fresh mango tempura wrapped in nori and sushi rice.",
     img: "/assets/mango-tempura-maki.jpg",
-  }
+  },
+  {
+    name: "Rainbow Roll",
+    price: 15.99,
+    color: "bg-yellow-500",
+    description: "Inside-out roll with crab, avocado, cucumber, topped with assorted fish and avocado slices.",
+    img: "/assets/rainbow-roll.jpg",
+  },
+  {
+    name: "Volcano Roll",
+    price: 13.99,
+    color: "bg-red-500",
+    description: "Deep-fried roll with spicy tuna, cream cheese, and scallions, topped with spicy mayo and eel sauce.",
+    img: "/assets/volcano-roll.jpg",
+  },
+  {
+    name: "Caterpillar Roll",
+    price: 14.99,
+    color: "bg-green-500",
+    description: "Inside-out roll with eel, cucumber, topped with avocado slices and eel sauce.",
+    img: "/assets/caterpillar-roll.jpg",
+  },
 ];

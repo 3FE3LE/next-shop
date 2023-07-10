@@ -11,5 +11,6 @@ export type TOrderProduct = {
 }
 
 export type TLabelProps ={
-  text: string
+  text: string,
+  isModal?: boolean
 }
