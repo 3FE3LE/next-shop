@@ -11,11 +11,9 @@ export default function Home() {
       <section>
         <Navbar />
         <ContentWrapper>
-          <div className="grid grid-flow-row grid-cols-3">
             {sushiPlates.map((item) => (
               <GridItem key={item.img} item={item} />
             ))}
-          </div>
         </ContentWrapper>
       </section>
       <ShoppingCart />
