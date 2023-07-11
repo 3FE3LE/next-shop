@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="flex sticky top-0 justify-between p-4 h-18">
       <div className="flex gap-8 items-center">
-        <h1 className="font-bold text-3xl">Sushi Shop</h1>
+        <h1 className="font-bold text-2xl">Sushi Shop</h1>
         <Link href={"/total"}>
           <li>Total</li>
         </Link>
