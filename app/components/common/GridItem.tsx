@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TextDescription from "./TextDescription";
 import TextLabel from "./TextLabel";
-import { TOrderProduct, TProduct } from "../../types/SushiCartTypes";
+import { TProduct } from "../../types/SushiCartTypes";
 import { ASSETS_BASE_URI } from "@constants/index";
 import { LabelsWrapper } from "../Wrappers";
 
@@ -11,26 +11,23 @@ type GridItemProps = {
   item: TProduct;
   handleSetProduct: (product: TProduct) => void;
   isModalShow: boolean;
-  products?: TOrderProduct[];
+  isLastItem: boolean;
+  isProductDetail?: boolean;
 };
 
 export default function GridItem({
   item,
   handleSetProduct,
   isModalShow,
-  products,
+  isLastItem,
+  isProductDetail,
 }: GridItemProps) {
   return (
     <div
       onClick={() => handleSetProduct(item)}
-      className={`
-        ${
-          item.color
-        } first:col-span-2 first:row-span-2 aspect-square relative ${
-        products && products.length % 2 === 0
-          ? "last:col-span-2 sm:last:col-span-1"
-          : ""
-      }
+      className={`relative ${item.color} 
+          ${isLastItem ? "col-span-2 " : "col-auto"}
+          ${isProductDetail ? "first:col-span-2 first:row-span-2 " : ""}
         `}
     >
       <Link

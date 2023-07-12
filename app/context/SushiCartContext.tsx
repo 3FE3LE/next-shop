@@ -2,7 +2,8 @@ import { createContext } from "react";
 import { TOrderProduct, TProduct } from "../types/SushiCartTypes";
 
 export type TSushiCartContext = {
-  total: number;
+  totalPrice: number;
+  totalQuantity: number;
   isModalShow: boolean;
   handleChangeModal: () => void;
   products: TOrderProduct[];
@@ -15,7 +16,8 @@ export type TSushiCartContext = {
 };
 
 const SushiCartContext = createContext<TSushiCartContext>({
-  total: 0,
+  totalPrice: 0,
+  totalQuantity: 0,
   isModalShow: false,
   handleChangeModal: () => {},
   products: [],
