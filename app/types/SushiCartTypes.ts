@@ -1,16 +1,20 @@
 export type TProduct = {
-  name: string;
+  id: string;
+  name: TInternationalText;
   color: string;
-  description: string;
+  description: TInternationalText;
+  category: string;
   price: number;
-  img: string
+  img: string;
+  ingredients: string[];
 };
-export type TOrderProduct = {
-  product: TProduct,
-  quantity: number,
-}
 
-export type TLabelProps ={
-  text: string,
-  isModal?: boolean
-}
+export type TOrderProduct = {
+  product: TProduct;
+  quantity: number;
+};
+
+export type TInternationalText = {
+  es: string;
+  en: string;
+};

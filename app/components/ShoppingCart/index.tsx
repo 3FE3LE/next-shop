@@ -17,7 +17,7 @@ export default function ShoppingCart() {
         <h1 className="font-bold text-2xl">Shopping Cart</h1>
         <button onClick={() => handleChangeModal()} className="">
           <div className="fill-white hover:fill-slate-500 transition-colors">
-            <CrossIcon/>
+            <CrossIcon />
           </div>
         </button>
       </div>
