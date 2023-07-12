@@ -13,9 +13,10 @@ export const sushiPlates = [
     },
     category: "sushi_rolls",
     color: "bg-red-500",
+    ingredients: ["Crab stick", "Avocado", "Cucumber"],
   },
   {
-    id: "2b",
+    id: "1b",
     name: {
       es: "Sashimi Variado",
       en: "Assorted Sashimi",
@@ -28,9 +29,10 @@ export const sushiPlates = [
     },
     category: "sushi_rolls",
     color: "bg-red-500",
+    ingredients: ["Salmon", "Tuna", "Yellowtail"],
   },
   {
-    id: "3c",
+    id: "1c",
     name: {
       es: "Nigiri de Salmón",
       en: "Salmon Nigiri",
@@ -43,9 +45,10 @@ export const sushiPlates = [
     },
     category: "sushi_rolls",
     color: "bg-red-500",
+    ingredients: ["Salmon", "Seasoned rice"],
   },
   {
-    id: "4d",
+    id: "1d",
     name: {
       es: "Maki de Atún",
       en: "Tuna Maki",
@@ -58,9 +61,10 @@ export const sushiPlates = [
     },
     category: "sushi_rolls",
     color: "bg-red-500",
+    ingredients: ["Tuna", "Avocado", "Nori seaweed"],
   },
   {
-    id: "5e",
+    id: "1e",
     name: {
       es: "Uramaki Tempura",
       en: "Tempura Uramaki",
@@ -73,9 +77,10 @@ export const sushiPlates = [
     },
     category: "sushi_rolls",
     color: "bg-red-500",
+    ingredients: ["Tempura shrimp", "Avocado", "Cream cheese"],
   },
   {
-    id: "6f",
+    id: "2a",
     name: {
       es: "Gyoza de Cerdo",
       en: "Pork Gyoza",
@@ -88,9 +93,10 @@ export const sushiPlates = [
     },
     category: "hot_appetizers",
     color: "bg-cyan-600",
+    ingredients: ["Pork", "Dumpling wrapper"],
   },
   {
-    id: "7g",
+    id: "2b",
     name: {
       es: "Yakitori de Pollo",
       en: "Chicken Yakitori",
@@ -103,9 +109,10 @@ export const sushiPlates = [
     },
     category: "hot_appetizers",
     color: "bg-cyan-600",
+    ingredients: ["Chicken", "Teriyaki sauce"],
   },
   {
-    id: "8h",
+    id: "2c",
     name: {
       es: "Tempura de Vegetales",
       en: "Vegetable Tempura",
@@ -118,9 +125,10 @@ export const sushiPlates = [
     },
     category: "hot_appetizers",
     color: "bg-cyan-600",
+    ingredients: ["Assorted vegetables", "Tempura batter"],
   },
   {
-    id: "9i",
+    id: "2d",
     name: {
       es: "Sopa Miso",
       en: "Miso Soup",
@@ -133,9 +141,10 @@ export const sushiPlates = [
     },
     category: "hot_appetizers",
     color: "bg-cyan-600",
+    ingredients: ["Miso paste", "Tofu", "Seaweed"],
   },
   {
-    id: "10j",
+    id: "2e",
     name: {
       es: "Tataki de Res",
       en: "Beef Tataki",
@@ -148,9 +157,10 @@ export const sushiPlates = [
     },
     category: "hot_appetizers",
     color: "bg-cyan-600",
+    ingredients: ["Beef", "Soy sauce", "Ginger"],
   },
   {
-    id: "11k",
+    id: "3a",
     name: {
       es: "Tartar de Salmón",
       en: "Salmon Tartare",
@@ -163,9 +173,10 @@ export const sushiPlates = [
     },
     category: "sashimi_specialties",
     color: "bg-sky-500",
+    ingredients: ["Salmon", "Avocado", "Red onion"],
   },
   {
-    id: "12l",
+    id: "3b",
     name: {
       es: "Tataki de Atún",
       en: "Tuna Tataki",
@@ -178,9 +189,10 @@ export const sushiPlates = [
     },
     category: "sashimi_specialties",
     color: "bg-sky-500",
+    ingredients: ["Tuna", "Soy sauce", "Sesame"],
   },
   {
-    id: "13m",
+    id: "3c",
     name: {
       es: "Nigiri de Pulpo",
       en: "Octopus Nigiri",
@@ -193,9 +205,10 @@ export const sushiPlates = [
     },
     category: "sashimi_specialties",
     color: "bg-sky-500",
+    ingredients: ["Octopus", "Seasoned rice"],
   },
   {
-    id: "14n",
+    id: "3d",
     name: {
       es: "Maki de Pepino",
       en: "Cucumber Maki",
@@ -208,9 +221,10 @@ export const sushiPlates = [
     },
     category: "sashimi_specialties",
     color: "bg-sky-500",
+    ingredients: ["Cucumber", "Nori seaweed"],
   },
   {
-    id: "15o",
+    id: "3e",
     name: {
       es: "Uramaki Rainbow",
       en: "Rainbow Uramaki",
@@ -223,9 +237,10 @@ export const sushiPlates = [
     },
     category: "sashimi_specialties",
     color: "bg-sky-500",
+    ingredients: ["Shrimp", "Avocado", "Assorted fish slices"],
   },
   {
-    id: "16p",
+    id: "3f",
     name: {
       es: "Tacos de Salmón",
       en: "Salmon Tacos",
@@ -236,11 +251,12 @@ export const sushiPlates = [
       es: "Tacos de salmón fresco con salsa de chipotle y repollo rallado",
       en: "Fresh salmon tacos with chipotle sauce and shredded cabbage",
     },
-    category: "fusion_dishes",
+    category: "sashimi_specialties",
     color: "bg-lime-400",
+    ingredients: ["Salmon", "Chipotle sauce", "Shredded cabbage"],
   },
   {
-    id: "17q",
+    id: "3g",
     name: {
       es: "Ceviche de Atún",
       en: "Tuna Ceviche",
@@ -251,11 +267,12 @@ export const sushiPlates = [
       es: "Ceviche de atún fresco marinado en limón con cebolla roja y cilantro",
       en: "Fresh tuna ceviche marinated in lime juice with red onion and cilantro",
     },
-    category: "fusion_dishes",
+    category: "sashimi_specialties",
     color: "bg-lime-400",
+    ingredients: ["Tuna", "Lime juice", "Red onion"],
   },
   {
-    id: "18r",
+    id: "3h",
     name: {
       es: "Rollito Vietnamita",
       en: "Vietnamese Spring Roll",
@@ -266,11 +283,12 @@ export const sushiPlates = [
       es: "Rollito de papel de arroz relleno de camarones, fideos de arroz y vegetales",
       en: "Rice paper roll filled with shrimp, rice noodles, and vegetables",
     },
-    category: "fusion_dishes",
+    category: "sashimi_specialties",
     color: "bg-lime-400",
+    ingredients: ["Shrimp", "Rice noodles", "Vegetables"],
   },
   {
-    id: "19s",
+    id: "3i",
     name: {
       es: "Ensalada de Algas",
       en: "Seaweed Salad",
@@ -281,11 +299,12 @@ export const sushiPlates = [
       es: "Ensalada fresca de algas con aderezo de sésamo",
       en: "Fresh seaweed salad with sesame dressing",
     },
-    category: "fusion_dishes",
+    category: "sashimi_specialties",
     color: "bg-lime-400",
+    ingredients: ["Seaweed", "Sesame dressing"],
   },
   {
-    id: "20t",
+    id: "3j",
     name: {
       es: "Nigiri de Camarón",
       en: "Shrimp Nigiri",
@@ -296,11 +315,12 @@ export const sushiPlates = [
       es: "Láminas de camarón sobre arroz sazonado",
       en: "Shrimp slices over seasoned rice",
     },
-    category: "fusion_dishes",
+    category: "sashimi_specialties",
     color: "bg-lime-400",
+    ingredients: ["Shrimp", "Seasoned rice"],
   },
   {
-    id: "21u",
+    id: "3k",
     name: {
       es: "Sashimi de Salmón",
       en: "Salmon Sashimi",
@@ -313,9 +333,10 @@ export const sushiPlates = [
     },
     category: "signature_sushi",
     color: "bg-amber-300",
+    ingredients: ["Salmon"],
   },
   {
-    id: "22v",
+    id: "4a",
     name: {
       es: "Maki de Aguacate",
       en: "Avocado Maki",
@@ -328,9 +349,10 @@ export const sushiPlates = [
     },
     category: "signature_sushi",
     color: "bg-amber-300",
+    ingredients: ["Avocado", "Nori seaweed"],
   },
   {
-    id: "23w",
+    id: "4b",
     name: {
       es: "Uramaki de Langostino",
       en: "Shrimp Uramaki",
@@ -343,9 +365,10 @@ export const sushiPlates = [
     },
     category: "signature_sushi",
     color: "bg-amber-300",
+    ingredients: ["Cooked shrimp", "Avocado"],
   },
   {
-    id: "24x",
+    id: "4c",
     name: {
       es: "Nigiri de Trucha",
       en: "Trout Nigiri",
@@ -358,9 +381,10 @@ export const sushiPlates = [
     },
     category: "signature_sushi",
     color: "bg-amber-300",
+    ingredients: ["Trout", "Seasoned rice"],
   },
   {
-    id: "25y",
+    id: "4d",
     name: {
       es: "Temaki de Atún Picante",
       en: "Spicy Tuna Temaki",
@@ -373,9 +397,10 @@ export const sushiPlates = [
     },
     category: "signature_sushi",
     color: "bg-amber-300",
+    ingredients: ["Spicy tuna", "Vegetables"],
   },
   {
-    id: "26z",
+    id: "4e",
     name: {
       es: "Rollito de Salmón",
       en: "Salmon Roll",
@@ -388,9 +413,10 @@ export const sushiPlates = [
     },
     category: "special_rolls",
     color: "bg-indigo-500",
+    ingredients: ["Salmon", "Avocado", "Cream cheese"],
   },
   {
-    id: "27aa",
+    id: "4f",
     name: {
       es: "Nigiri de Pez Mantequilla",
       en: "Yellowtail Nigiri",
@@ -403,9 +429,10 @@ export const sushiPlates = [
     },
     category: "special_rolls",
     color: "bg-indigo-500",
+    ingredients: ["Yellowtail", "Seasoned rice"],
   },
   {
-    id: "28bb",
+    id: "4g",
     name: {
       es: "Maki de Mango",
       en: "Mango Maki",
@@ -418,9 +445,10 @@ export const sushiPlates = [
     },
     category: "special_rolls",
     color: "bg-indigo-500",
+    ingredients: ["Mango", "Nori seaweed"],
   },
   {
-    id: "29cc",
+    id: "4h",
     name: {
       es: "Uramaki de Espárragos",
       en: "Asparagus Uramaki",
@@ -433,9 +461,10 @@ export const sushiPlates = [
     },
     category: "special_rolls",
     color: "bg-indigo-500",
+    ingredients: ["Fresh asparagus", "Avocado"],
   },
   {
-    id: "30dd",
+    id: "4i",
     name: {
       es: "Nigiri de Anguila",
       en: "Eel Nigiri",
@@ -448,8 +477,10 @@ export const sushiPlates = [
     },
     category: "special_rolls",
     color: "bg-indigo-500",
+    ingredients: ["Grilled eel", "Seasoned rice"],
   },
 ];
+
 
 export const categorias = [
   {

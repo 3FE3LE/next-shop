@@ -41,9 +41,9 @@ export default function ProductItem({ item }: TProductItemProps) {
             height={132}
           />
         </div>
-        <div className="flex justify-center items-center relative p-4 w-full">
+        <div className="flex justify-center items-center relative p-4 pt-16 w-full">
           <LabelsWrapper>
-            <TextLabel text={product.name.es} />
+            <TextLabel text={product.name.en} />
             <TextLabel italic text={utils.formatPrice(product.price)} />
           </LabelsWrapper>
           <QuantityControl product={product} quantity={quantity} />

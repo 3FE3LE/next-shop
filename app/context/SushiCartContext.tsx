@@ -11,6 +11,7 @@ export type TSushiCartContext = {
   handleDeleteProduct: (product: TProduct) => void;
   currentProduct?: TProduct;
   handleSetProduct: (product: TProduct) => void;
+  handleSetProducts: (product: TOrderProduct[]) => void;
 };
 
 const SushiCartContext = createContext<TSushiCartContext>({
@@ -23,8 +24,7 @@ const SushiCartContext = createContext<TSushiCartContext>({
   handleDeleteProduct: () => {},
   currentProduct: undefined,
   handleSetProduct: () => {},
+  handleSetProducts: () => {},
 });
-
-
 
 export default SushiCartContext;
