@@ -7,18 +7,25 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
   const [isModalShow, setIsModalShow] = useState<boolean>(false);
   const [products, setProducts] = useState<TOrderProduct[]>([]);
   const [currentProduct, setCurrentProduct] = useState<TProduct>();
-  const [total, setTotal] = useState<number>(0);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   // Update total price when adding new items to the cart
   useEffect(() => {
-    const calcTotal = (): number => {
-      let sum = 0;
+    const calcTotal = (): { totalPrice: number; totalQuantity: number } => {
+      let totalPrice = 0;
+      let totalQuantity = 0;
       products.forEach(({ product, quantity }: TOrderProduct) => {
-        sum += product.price * quantity;
+        totalPrice += product.price * quantity;
+        totalQuantity += quantity;
       });
-      return sum;
+      return {
+        totalPrice,
+        totalQuantity,
+      };
     };
-    setTotal(calcTotal());
+    setTotalPrice(calcTotal().totalPrice);
+    setTotalQuantity(calcTotal().totalQuantity);
     // close modal when not have products on cart
     if (products.length === 0 && !currentProduct) setIsModalShow(false);
   }, [products, currentProduct]);
@@ -73,7 +80,6 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
         );
         localStorage.setItem("products", JSON.stringify(products));
       } else {
-        console.log("erase");
         handleDeleteProduct(product);
       }
     };
@@ -95,7 +101,7 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
       if (localProducts.length > 0) setProducts(localProducts);
     };
     return {
-      total,
+      totalPrice,
       isModalShow,
       handleChangeModal,
       products,
@@ -105,8 +111,9 @@ const SushiCartProvider = ({ children }: { children: React.ReactNode }) => {
       currentProduct,
       handleSetProduct,
       handleSetProducts,
+      totalQuantity,
     };
-  }, [isModalShow, products, total, currentProduct]);
+  }, [isModalShow, products, totalPrice, totalQuantity, currentProduct]);
 
   return (
     <SushiCartContext.Provider value={Context}>

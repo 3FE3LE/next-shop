@@ -13,8 +13,8 @@ export default function TextDescription({
       }`}
     >
       <p
-        className={` text-sm lg:text-2xl xl:text-3xl font-black ${
-          isModal ? "md:text-3xl lg:text-xl sm:font-bold" : "md:text-lg"
+        className={` leading-none md:leading-none text-sm lg:text-xl xl:text-2xl font-black ${
+          isModal ? "md:text-2xl  lg:text-xl " : "md:text-lg"
         } `}
       >
         {text}
