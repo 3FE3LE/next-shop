@@ -53,7 +53,7 @@ export default function ProductDetail() {
           />
           <div
             onClick={() => handleAddProduct(currentProduct)}
-            className={`cursor-pointer z-10 p-16 aspect-square relative fill-black/20 hover:fill-red-600 hover:scale-110 transition flex justify-center items-center ${currentProduct.color}`}
+            className={`cursor-pointer z-10 p-16 aspect-square relative fill-black/20 hover:fill-black/40 hover:scale-110 transition flex justify-center items-center ${currentProduct.color}`}
           >
             <PlusIcon />
             <span className="absolute bottom-8">
