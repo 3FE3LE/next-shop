@@ -67,7 +67,7 @@ export default function ProductDetail() {
               <h2 className="uppercase font-bold text-white">ingredients</h2>
             </div>
           </div>
-          <div className={`col-span-2 md:col-span-1 md:h-full md:px-4 h-16 uppercase font-bold text-4xl flex justify-center items-center  w-full bg-black `}>
+          <div className={`col-span-2 text-2xl md:col-span-1 md:h-full md:px-4 h-16 uppercase font-bold md:text-4xl flex justify-center items-center  w-full bg-black `}>
             recommended dishes
           </div>
           {sushiPlates.map((product: TProduct) => {
