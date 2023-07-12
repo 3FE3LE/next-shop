@@ -1,22 +1,22 @@
-import React from "react";
-import GridItem from "@components/GridItem";
-import Navbar from "@components/Navbar";
-import ShoppingCart from "@components/ShoppingCart";
+"use client";
+import useSushiCart from "@hooks/useSushiCart";
+import { ContentWrapper } from "@components/Wrappers";
+import GridItem from "@components/common/GridItem";
 import { sushiPlates } from "./constants";
-import ContentWrapper from "@components/ContentWrapper";
 
 export default function Home() {
+  const { isModalShow, handleSetProduct, products } = useSushiCart();
   return (
-    <main className="">
-      <section>
-        <Navbar />
-        <ContentWrapper>
-            {sushiPlates.map((item) => (
-              <GridItem key={item.img} item={item} />
-            ))}
-        </ContentWrapper>
-      </section>
-      <ShoppingCart />
-    </main>
+    <ContentWrapper isModalShow={isModalShow}>
+      {sushiPlates.map((item) => (
+        <GridItem
+          key={item.id}
+          item={item}
+          handleSetProduct={handleSetProduct}
+          isModalShow={isModalShow}
+          products={products}
+        />
+      ))}
+    </ContentWrapper>
   );
 }
