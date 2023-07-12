@@ -4,7 +4,6 @@ import GridItem from "@components/common/GridItem";
 import { ContentWrapper } from "@components/Wrappers";
 import { PlusIcon } from "@components/Icons";
 import { sushiPlates } from "@constants/index";
-import { TProduct } from "../types/SushiCartTypes";
 import { useEffect } from "react";
 
 export default function ProductDetail() {
@@ -31,6 +30,16 @@ export default function ProductDetail() {
     }
   }, [currentProduct, handleSetProduct, handleSetProducts, products.length]);
 
+  const categoryDishes = sushiPlates.map((product, i) => {
+    if (
+      currentProduct &&
+      product.category === currentProduct.category &&
+      product.id !== currentProduct.id
+    ) {
+      return product;
+    }
+  });
+
   return (
     <ContentWrapper isModalShow={isModalShow}>
       {currentProduct && (
@@ -39,7 +48,8 @@ export default function ProductDetail() {
             item={currentProduct}
             handleSetProduct={handleSetProduct}
             isModalShow={isModalShow}
-            products={products}
+            isLastItem={false}
+            isProductDetail
           />
           <div
             onClick={() => handleAddProduct(currentProduct)}
@@ -55,7 +65,7 @@ export default function ProductDetail() {
           <div className="aspect-square bg-black relative flex justify-evenly items-center pb-8 flex-col ">
             {currentProduct.ingredients.map((item) => (
               <li
-                className="text-white text-xl sm:text-4xl uppercase font-bold"
+                className="text-white text-xl sm:text-3xl lg:text-4xl uppercase font-bold"
                 key={item}
               >
                 {item}
@@ -64,26 +74,30 @@ export default function ProductDetail() {
             <div
               className={`absolute bottom-0 w-full py-2 h-18 flex justify-center ${currentProduct.color}`}
             >
-              <h2 className="uppercase font-bold text-white">ingredients</h2>
+              <h2 className="uppercase font-bold text-xl sm:text-3xl lg:text-4xl lg:py-4 text-white">
+                ingredients
+              </h2>
             </div>
           </div>
-          <div className={`col-span-2 text-2xl md:col-span-1 md:h-full md:px-4 h-16 uppercase font-bold md:text-4xl flex justify-center items-center  w-full bg-black `}>
+          <div
+            className={`col-span-2 text-2xl  md:col-span-1 md:h-full md:px-4 h-16 uppercase font-bold md:text-3xl lg:text-4xl flex justify-center items-center  w-full bg-black `}
+          >
             recommended dishes
           </div>
-          {sushiPlates.map((product: TProduct) => {
-            if (
-              product.category === currentProduct.category &&
-              product.id !== currentProduct.id
-            ) {
-              return (
-                <GridItem
-                  key={product.id}
-                  item={product}
-                  isModalShow={isModalShow}
-                  handleSetProduct={handleSetProduct}
-                ></GridItem>
-              );
-            }
+          {categoryDishes.map((product) => {
+            return (
+              <>
+                {product && (
+                  <GridItem
+                    key={product.id}
+                    item={product}
+                    isModalShow={isModalShow}
+                    handleSetProduct={handleSetProduct}
+                    isLastItem={false}
+                  ></GridItem>
+                )}
+              </>
+            );
           })}
         </>
       )}

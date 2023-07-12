@@ -7,9 +7,9 @@ export const ContentWrapper = ({
 }) => {
   return (
     <main
-      className={`bg-black w-full transition origin-top-left  ${
+      className={`bg-black h-screen w-full transition origin-top-left  ${
         isModalShow
-          ? "scale-66 md:scale-50 lg:scale-66 h-screen"
+          ? "scale-66 md:scale-50 lg:scale-66 "
           : "xl:scale-66"
       }`}
     >
