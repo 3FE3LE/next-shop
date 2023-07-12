@@ -1,15 +1,12 @@
-"use client";
-import useSushiCart from "@hooks/useSushiCart";
-import React from "react";
-
-export default function ContentWrapper({
+export const ContentWrapper = ({
   children,
+  isModalShow,
 }: {
   children: React.ReactNode;
-}) {
-  const { isModalShow } = useSushiCart();
+  isModalShow: boolean;
+}) => {
   return (
-    <div
+    <main
       className={`w-full  transition origin-top-left  ${
         isModalShow ? "scale-66 md:scale-50 lg:scale-66 h-screen" : ""
       }`}
@@ -21,6 +18,10 @@ export default function ContentWrapper({
       >
         {children}
       </div>
-    </div>
+    </main>
   );
-}
+};
+
+export const LabelsWrapper = ({ children }: { children: React.ReactNode }) => {
+  return <div className="absolute left-0 top-0 flex flex-col">{children}</div>;
+};
