@@ -22,7 +22,6 @@ export default function ProductDetail() {
     if (typeof window !== "undefined" && window.localStorage) {
       const localProduct = JSON.parse(localStorage.getItem("product")!);
       const localProducts = JSON.parse(localStorage.getItem("products")!);
-      console.log(localProduct, localProducts)
       if (!currentProduct && localProduct) {
         handleSetProduct(localProduct);
       }
@@ -44,7 +43,7 @@ export default function ProductDetail() {
           />
           <div
             onClick={() => handleAddProduct(currentProduct)}
-            className={`cursor-pointer p-16 aspect-square relative fill-black/20 hover:fill-red-600 hover:scale-110 transition flex justify-center items-center ${currentProduct.color}`}
+            className={`cursor-pointer z-10 p-16 aspect-square relative fill-black/20 hover:fill-red-600 hover:scale-110 transition flex justify-center items-center ${currentProduct.color}`}
           >
             <PlusIcon />
             <span className="absolute bottom-8">
@@ -53,7 +52,7 @@ export default function ProductDetail() {
               </h2>
             </span>
           </div>
-          <div className="aspect-square relative flex justify-evenly items-center pb-8 flex-col ">
+          <div className="aspect-square bg-black relative flex justify-evenly items-center pb-8 flex-col ">
             {currentProduct.ingredients.map((item) => (
               <li
                 className="text-white text-xl sm:text-4xl uppercase font-bold"
@@ -67,6 +66,9 @@ export default function ProductDetail() {
             >
               <h2 className="uppercase font-bold text-white">ingredients</h2>
             </div>
+          </div>
+          <div className={`col-span-2 md:col-span-1 md:h-full md:px-4 h-16 uppercase font-bold text-4xl flex justify-center items-center  w-full bg-black `}>
+            recommended dishes
           </div>
           {sushiPlates.map((product: TProduct) => {
             if (
